@@ -1,0 +1,292 @@
+@charset "utf-8";
+
+@font-face { 
+	font-family: 'S-CoreDream'; 
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-1Thin.woff') format('woff'); 
+	font-weight: 100; 
+	font-style: normal; 
+}
+@font-face { 
+	font-family: 'S-CoreDream'; 
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff') format('woff'); 
+	font-weight: 200; 
+	font-style: normal; 
+}
+@font-face { 
+	font-family: 'S-CoreDream'; 
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff'); 
+	font-weight: 300; 
+	font-style: normal; 
+}
+@font-face { 
+	font-family: 'S-CoreDream'; 
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff'); 
+	font-weight: 400; 
+	font-style: normal; 
+}
+@font-face { 
+	font-family: 'S-CoreDream'; 
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff'); 
+	font-weight: 500; 
+	font-style: normal; 
+}
+@font-face { 
+	font-family: 'S-CoreDream'; 
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff'); 
+	font-weight: 600; 
+	font-style: normal; 
+}
+@font-face { 
+	font-family: 'S-CoreDream'; 
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-7ExtraBold.woff') format('woff'); 
+	font-weight: 700; 
+	font-style: normal; 
+}
+@font-face { 
+	font-family: 'S-CoreDream'; 
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff'); 
+	font-weight: 800; 
+	font-style: normal; 
+}
+@font-face { 
+	font-family: 'S-CoreDream'; 
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-9Black.woff') format('woff'); 
+	font-weight: 900; 
+	font-style: normal; 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul{
+    list-style: none;
+}
+body{
+    font-family: 'S-CoreDream', serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333;
+}
+/*메인배너*/
+header ul li{
+    color: #fff;
+   font-size: 18px;
+}
+.logo a{
+    float: left;
+   padding-top: 5px;
+   display: block;
+}
+.nav{
+    float: right;
+}
+.menu{
+    float: left;
+   position: relative;
+}
+.sub{
+   position: absolute;
+   top: 64px;
+   left: 0;
+   width: 100%;
+   display: none;
+   font-weight: 300;
+}
+.sub li a{
+   padding: 5px 0 !important;
+   font-size: 14px;
+   font-weight: 400;
+   display: block;
+   background: rgb(255, 255, 255, 0.8);
+   text-align: center;
+   color: rgb(102, 102, 102);
+}
+.sub li a:nth-child(1){
+   padding-top: 20px !important;
+}
+
+
+.menu{
+    display: block;
+   text-align:center;
+   padding: 20px 35px;
+}
+header, #header_inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+   padding: 51px 5% 20px 5%;
+}
+
+.nav> ul> li:hover .sub{
+   display: block;
+}
+.sub li a:hover{
+   color: rgb(109, 148, 19);
+}
+.sub .btn a{
+	padding-bottom: 20px !important;
+}
+#main_banner{
+    background: url(../images/main_banner.png) no-repeat center top;
+    width: 100%;
+    height: 636px;
+    position: relative;
+}
+#main_banner h1{
+    text-align: center;
+    font-size: 54px;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 5px;
+    padding-top: 295px;
+}
+.banner_in{
+    width: 1320px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/*카테고리*/
+.category{
+    width: 1320px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 143px;
+}
+.category ul li{
+    float: left;
+    font-size: 18px;
+    width: 7%;
+    text-align: center;
+    font-weight: 300;
+    color: rgb(116, 116, 116);
+}
+.category ul{
+    padding-top: 197px;
+}
+.category ul li a{
+    display: inline-block;
+}
+.category ul li:nth-child(7){
+    font-weight: 500;
+    color: rgb(109, 148, 19);
+}
+.category ul li:hover{
+    color: rgb(109, 148, 19);
+}
+/*상품들*/
+.products{
+    width: 1320px;
+    margin: 0 auto;
+    height: auto;
+}
+.pro_box1, .pro_box2, .pro_box3{
+    width: 100%;
+}
+.products div{
+    float: left;
+}
+.products div a{
+    display: block;
+}
+.products div img{
+    
+}
+.item1{
+    margin: 0 10%;
+}
+.item2{
+    margin:0 10%;
+}
+.pro_box2{
+    margin: 199px 0;
+    overflow: hidden;
+}
+.pro_box3{
+    margin-bottom: 300px;
+    overflow: hidden;
+}
+.pro_box1{
+    overflow: hidden;
+}
+.products p{
+    text-align: center;
+    padding-top: 30px;
+    font-size: 16px;
+    font-weight: 300;
+}
+.products h3{
+    font-size: 18px;
+    font-weight: 400;
+    border: 0.5px solid rgb(99, 99, 99);
+    display: inline-block;
+    color: rgb(99,99,99);
+    padding: 5px 21px;
+    margin-bottom: 15px;
+}
+.products h2{
+    font-size: 18px;
+    font-weight: 400;
+    border: 0.5px solid rgb(99, 99, 99);
+    color: rgb(99,99,99);
+    width: 95px;
+    text-align: center;
+    padding: 5px 0;
+    margin-bottom: 15px;
+    display: block;
+}
+.title_box{
+    clear: both;
+}
+/*footer*/
+.footer_in{
+    width: 1320px;
+    margin: 0 auto;
+}
+.footer_logo{
+    float: left;
+    display: block;
+}
+.footer_t{
+    float: right;
+    padding-right: 30%;
+    color: #717171;
+    font-weight: 200;
+}
+.footer_t p{
+    padding-bottom: 13px;
+}
+.bold2{
+    font-weight: 400;
+}
+.footer{
+    padding: 88px 0 90px;
+    overflow: hidden;
+    border-top: 1px solid rgb(110, 110, 110);
+}
+.reserved{
+    font-size: 14px;
+    padding-top: 38px;
+}
+.footer{
+    clear: both;
+}
+/*top버튼*/
+.fixed_box{
+    width:40px;
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    display: inline-block;
+    z-index: 999999;
+}
+

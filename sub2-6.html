@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seoil Timber</title>
+    <link rel="stylesheet" href="css/sub2-6.css">
+
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"><!--aos css 연결-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><!--aos js 연결-->
+</head>
+<body>
+    <div id="main_banner">
+      <h1 data-aos="fade-down" data-aos-duration="1000">PRODUCTS</h1>
+    <header>
+        <div id="header_inner">
+            <div class="logo"><a href="#"><img src="images/main_logo.png" alt="메인로고"></a></div>
+            <div class="nav">
+                <ul>
+                   <li class="menu"><a href="#">BRAND STORY</a>
+                </li>
+                   <li class="menu"><a href="#">PRODUCTS</a>
+                <ul class="sub">
+                    <li><a href="#">방부목</a></li>
+                    <li><a href="#">산업재</a></li>
+                    <li><a href="#">천연데크</a></li>
+                    <li><a href="#">구조재</a></li>
+                    <li><a href="#">사이딩</a></li>
+                    <li><a href="#">루바</a></li>
+                    <li><a href="#">집성재</a></li>
+                    <li><a href="#">합판</a></li>
+                    <li class="btn"><a href="#">소할재</a></li>
+                </ul>
+                </li>
+                    <li class="menu"><a href="#">TECHNOLOGY</a>
+                    </li>
+                    <li class="menu"><a href="#">COMMUNITY</a>
+                    <ul class="sub">
+                        <li><a href="#">견적문의</a></li>
+                        <li class="btn"><a href="#">공지사항</a></li>
+                    </ul></li> 
+                </ul>
+            </div><!--nav E-->
+        </div><!--header_inner E-->
+    </header>
+</div><!--main_banner E-->
+
+<div class="category">
+    <ul>
+        <li><a href="#none">방부목</a> </li>
+        <li><a href="#none">산업재</a></li>
+        <li><a href="#none">천연데크</a></li>
+        <li><a href="#none">구조재</a></li>
+        <li><a href="#none">사이딩</a></li>
+        <li><a href="#none">루바</a></li>
+        <li><a href="#none">집성재</a></li>
+        <li><a href="#none">합판</a></li>
+        <li><a href="#none">소할재</a></li>
+    </ul>
+</div><!--category E-->
+<div class="products">
+    <div class="pro_box1">
+        <div >
+            <a href="#none"><img src="images/pro1-5.png" alt="상품1"></a>
+            <p>소송 다루끼</p>
+        </div>
+        <div class="item1">
+            <a href="#none"><img src="images/pro2-5.png" alt="상품2"></a>
+            <p>라왕 다루끼</p>
+        </div>
+        <div>
+            <a href="#none"><img src="images/pro3-5.png" alt="상품2"></a>
+            <p>LVL 다루끼</p>
+        </div>
+        </div>
+</div><!--products E-->
+
+<div class="footer">
+    <div class="footer_in">
+        <div class="footer_logo"><a href="#none"><img src="images/footer_logo.png" alt="푸터로고"></a></div>
+        <div class="footer_t">
+                <p><span class="bold2">본사 및 공장:</span> 경남 밀양시 삼랑진읍 사기점길 33&emsp;
+                    <span class="bold2">Tel:</span> 055-716-0388&emsp;<span class="bold2">Fax:</span> 055-716-0389</p>
+                <p><span class="bold2">한림공장:</span> 경남 김해시 한림면 퇴래리 254-2
+                &emsp;<span class="bold2">Tel:</span> 055-328-1414&emsp;
+                <span class="bold2">Fax:</span> 055-343-2114</p>
+                <p><span class="bold2">흥동 판매 직영점:</span> 경남 김해시 흥동 39-5&emsp;
+                <span class="bold2">Tel:</span> 055-328-1020&emsp;
+                <span class="bold2">Fax:</span> 055-328-2223</p>
+                <p class="reserved">© 2022 SEOIL TIMBER CO.,LTD. ALL RIGHTS RESERVED.</p>
+        </div><!--footer_t E-->
+    </div><!--footer_in E-->
+</div><!--footer E-->
+
+
+<!--top btn-->
+<div class="fixed_box">
+    <a href="#main_banner"><img src="images/top.png" alt="up"></a>
+</div><!--fixed_box-->
+
+
+
+<script>
+    AOS.init();
+
+    $(function() {
+				$('a[href*="#"]:not([href="#"])').click(function() {
+				if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+				var target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+				if (target.length) {
+				$('html, body').animate({
+				scrollTop: target.offset().top
+				}, 500);//움직이는 시간 조정
+				return false;
+				}
+				}
+				});
+				});
+</script>
+</body>
+</html>
