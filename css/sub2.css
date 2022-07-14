@@ -80,187 +80,468 @@ body{
     font-size: 16px;
     line-height: 24px;
     color: #333;
+	width: 100%;
+	height: 100%;
 }
+
+
+
+
+
 /*메인배너*/
 header ul li{
-    color: #333;
-   font-size: 18px;
+   color: #333;
+  font-size: 18px;
 }
 .logo a{
-    float: left;
-   padding-top: 5px;
-   display: block;
+   float: left;
+  padding-top: 5px;
+  display: block;
+}
+.logo2 a, .logo3 a, .logo4 a, .logo5 a{
+   float: left;
+  padding-top: 3px;
+}
+.logo2, .logo3, .logo4, .logo5{
+   display: none;
 }
 .nav{
-    float: right;
+   float: right;
 }
 .menu{
-    float: left;
-   position: relative;
+   float: left;
+  position: relative;
 }
 .sub{
-   position: absolute;
-   top: 64px;
-   left: 0;
-   width: 100%;
-   display: none;
-   font-weight: 300;
-   border: 1px solid #333;
+  position: absolute;
+  top: 64px;
+  left: 0;
+  width: 100%;
+  display: none;
+  font-weight: 300;
+  border: 1px solid #333;
 }
 .sub li a{
-   padding: 5px 0 !important;
-   font-size: 14px;
-   font-weight: 400;
-   display: block;
-   background: #fff;
-   text-align: center;
-   color: rgb(102, 102, 102);
-   box-shadow: 5px 5px 5px rgb(110, 110, 110, 0.5);
+  padding: 5px 0 !important;
+  font-size: 14px;
+  font-weight: 400;
+  display: block;
+  background: #fff;
+  text-align: center;
+  color: rgb(102, 102, 102);
+  box-shadow: 5px 5px 5px rgb(110, 110, 110, 0.5);
 }
 .sub li a:nth-child(1){
-   padding-top: 20px !important;
+  padding-top: 20px !important;
 }
 
 
 .menu{
-    display: block;
-   text-align:center;
-   padding: 20px 35px;
+   display: block;
+  text-align:center;
+  padding: 20px 35px;
 }
 header, #header_inner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    box-sizing: border-box;
-   padding: 51px 5% 20px 5%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   box-sizing: border-box;
+  padding: 51px 5% 20px 5%;
 }
 
 .nav> ul> li:hover .sub{
-   display: block;
+  display: block;
 }
 .sub li a:hover{
-   color: rgb(109, 148, 19);
+  color: rgb(109, 148, 19);
 }
 
 .sub .btn a{
-	padding-bottom: 20px !important;
+  padding-bottom: 20px !important;
 }
 #main_banner{
-    background: #fff;
-    width: 100%;
-    height: 150px;
-    position: relative;
-    border-bottom: 0.5px solid #ccc ;
+   background: #fff;
+   width: 100%;
+   height: 150px;
+   position: relative;
+   border-bottom: 0.5px solid #ccc ;
 }
 .banner_in{
-    width: 1320px;
-    margin: 0 auto;
-    text-align: center;
+   width: 1320px;
+   margin: 0 auto;
+   text-align: center;
 }
+
+
+
+/*움직이는 메뉴버튼*/
+input[id="menuicon"]{
+	display: none;
+}
+/*움직이는 메뉴크기 위치*/
+input[id="menuicon"]+label{
+	display: block;
+	width: 40px;
+	height: 33px;
+	position: fixed;
+	right: 41px;   
+	top: 65px;
+	z-index: 20;
+	transition: all 0.5s;
+	cursor: pointer;
+   }
+/*움직이는 메뉴 클릭했을 때 색상*/
+input[id="menuicon"]:checked+label span{
+   background: #333333;
+}
+/*움직이는 메뉴 세줄선*/
+input[id="menuicon"]+label span{
+   display: block;
+   position: absolute;
+   width: 100%;
+   height: 3px;
+   border-radius: 30px;
+   background: #333;
+   transition: all 0.5s;
+}
+input[id="menuicon"]+label span:nth-child(1){
+   top: 0;
+}
+input[id="menuicon"]+label span:nth-child(2){
+   top: 50%;
+   transform:translateY(-50%);
+}
+input[id="menuicon"]+label span:nth-child(3){
+   bottom:0;
+}
+
+/*움직이는 메뉴클릭했을 때 변화*/
+input[id="menuicon"]:checked+label span:nth-child(1){
+   top:50%;
+   transform: translateY(-50%) rotate(45deg);
+}
+input[id="menuicon"]:checked+label span:nth-child(2){
+   opacity: 0;
+}
+input[id="menuicon"]:checked+label span:nth-child(3){
+   bottom:50%;
+   transform: translateY(50%) rotate(-45deg);
+}
+
+/*움직이는 메뉴 클릭했을 때 나타나는 슬라이더*/
+.slidebar{
+   width: 100%;
+   height: 100%;
+   background: #fff;
+   position: fixed;
+   top: 0;
+   right: -100%;
+   z-index: 10;
+   transition: all 0.5s;
+}
+input[id="menuicon"]:checked+label+div{
+   right:0;
+}
+
+/*슬라이더 안 메뉴*/
+.nav2{margin-top:100px;}
+.nav2 li{padding:30px;}
+.nav2 li a{color:#333333;
+font-size:30px;}
+
+
+input[id="menuicon"]+label, .slidebar{
+ display: none;
+}
+
 
 /*카테고리*/
 .category{
-    width: 1320px;
-    margin: 0 auto;
-    overflow: hidden;
-    margin-bottom: 143px;
+   width: 1320px;
+   margin: 0 auto;
+   overflow: hidden;
+   margin-bottom: 143px;
 }
 .category ul li{
-    float: left;
-    font-size: 18px;
-    width: 7%;
-    text-align: center;
-    font-weight: 300;
-    color: rgb(116, 116, 116);
+   float: left;
+   font-size: 18px;
+   padding-right: 3%;
+   text-align: center;
+   font-weight: 300;
+   color: rgb(116, 116, 116);
 }
+.category ul li:nth-child(9){
+   padding-right: none !important;
+}
+
 .category ul{
-    padding-top: 197px;
+   padding-top: 197px;
 }
 .category ul li a{
-    display: inline-block;
+   display: inline-block;
 }
 .category ul li:nth-child(1){
-    font-weight: 500;
-    color: rgb(109, 148, 19);
+   font-weight: 500;
+   color: rgb(109, 148, 19);
 }
 .category ul li:hover{
-    color: rgb(109, 148, 19);
+   color: rgb(109, 148, 19);
 }
-/*상품들*/
-.products{
-    width: 1320px;
-    margin: 0 auto;
-    height: auto;
+
+
+
+/*컨텐츠*/
+#products{
+   width: 1320px;
+   margin: 0 auto;
+   margin-bottom: 300px;
 }
-.pro_box1, .pro_box2{
-    width: 100%;
+.pro_box{
+   margin:0 auto;
+   width: 1320px;
+   padding: 30px 0;
+   text-align: center;
 }
-.products div{
-    float: left;
+.pro_box ul li img{
+   width: 100%; 
 }
-.products div a{
-    display: block;
+.pro_box ul li{
+   float: left;
+   width: 23.5%; 
+   margin-right: 2%;
+   background-color: #fff;
+   padding: 10px 0;
 }
-.products div img{
-    
+.pro_box ul li:nth-child(4){
+   margin-right: 0;
 }
-.item1{
-    margin: 0 10%;
+.pro_box ul{
+   overflow: hidden;
 }
-.item2{
-    margin-left: 10%;
-}
-.pro_box2{
-    margin: 199px 0 300px;
-}
-.products p{
-    text-align: center;
-    padding-top: 30px;
-    font-size: 16px;
-    font-weight: 300;
-}
+
 /*footer*/
 .footer_in{
-    width: 1320px;
-    margin: 0 auto;
+   width: 1320px;
+   margin: 0 auto;
 }
 .footer_logo{
-    float: left;
-    display: block;
+   float: left;
+   display: block;
 }
 .footer_t{
-    float: right;
-    padding-right: 30%;
-    color: #717171;
-    font-weight: 200;
+   float: right;
+   padding-right: 30%;
+   color: #717171;
+   font-weight: 200;
 }
 .footer_t p{
-    padding-bottom: 13px;
+   padding-bottom: 13px;
 }
 .bold2{
-    font-weight: 400;
+   font-weight: 400;
 }
 .footer{
-    padding: 88px 0 90px;
-    overflow: hidden;
-    border-top: 1px solid rgb(110, 110, 110);
+   padding: 88px 0 90px;
+   overflow: hidden;
+   border-top: 1px solid rgb(110, 110, 110);
 }
 .reserved{
-    font-size: 14px;
-    padding-top: 38px;
+   font-size: 14px;
+   padding-top: 38px;
 }
-.footer{
-    clear: both;
+.footer2{
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  display: none;
+  padding: 80px 0 50px ;
+  border-top: 1px solid rgb(110, 110, 110);
+  height: auto;
 }
-/*top버튼*/
-.fixed_box{
-    width:40px;
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    display: inline-block;
-    z-index: 999999;
+.footer_in2{
+  width: 80%;
+  margin: 0 auto;
+  height: auto;
 }
+.footer_t2{
+  color: #717171;
+   font-weight: 200;
+   font-size: 10px;
+   padding: 20px 0;
+   height: auto;
+}
+.reserved2{
+  font-size: 10px;
+}
+.small{
+  display: none;
+}
+.btn2{
+  display: none;
+}
+.footer2 p{
+  font-weight: 300;
+}
+
+
+
+
+
+@media(max-width:1709px){
+	input[id="menuicon"]+label, .slidebar{
+        display: block;
+    }
+    .nav{
+        display: none;
+    }
+   }
+
+   @media(max-width:1397px){
+      .footer_in{
+         width: 90%;
+         margin: 0 auto;
+      }
+      .footer_t{
+         padding-right: 20%;
+      }
+   }
+   @media(max-width:1384px){
+   #products{
+      width: 80%;
+      margin: 0 auto;
+      margin-bottom: 200px;
+   }
+   .pro_box{
+      width: 90%;
+      margin: 0 auto;
+  }
+  .pro_box ul li{
+      width: 48%;
+      margin: 0;
+      margin: 10px 0;
+  }
+  .pro_box ul li:nth-child(1), .pro_box ul li:nth-child(3){
+      margin-right: 4%;
+  }
+  .category{
+   width: 70%;
+   margin: 0 auto;
+   margin-bottom: 20px;
+}
+}
+
+     
+   @media(max-width:1275px){
+      .logo2{
+           display: block;
+       }
+       .logo{
+           display: none;
+       }
+       input[id="menuicon"]+label{
+         top: 60px;
+       }
+       #main_banner h1{
+         font-size: 44px;
+       }
+       .footer_t{
+         padding-right: 16%;
+      }
+   }
+
+   @media(max-width:1183px){
+      .footer p{
+         font-size: 12px;
+         padding-bottom: 10px;
+      }
+   }
+   @media(max-width:1029px){
+      .footer{
+         display: none;
+      }
+      .footer2{
+         display: block;
+      }
+   }
+   @media(max-width:866px){
+      .logo3{
+           display: block;
+       }
+       input[id="menuicon"]+label{
+         top: 56px;
+       }
+       .logo2{
+           display: none;
+       }
+       #main_banner h1{
+         font-size: 38px;
+       }
+       .category ul li{
+         font-size: 16px;
+       }
+       .category{
+         margin-bottom: 10px;
+      }
+      .category ul{
+         padding-top: 120px;
+      }
+   }
+   @media(max-width:768px){
+      #products{
+         width: 80%;
+         margin: 0 auto;
+         margin-bottom: 200px;
+      }
+      .pro_box{
+          width: 90%;
+          margin: 0 auto;
+      }
+      .pro_box ul li{
+          width: 100%;
+          margin-right: 0;
+          margin: 10px 0;
+          
+      }
+    
+  }
+
+  @media(max-width:502px){
+   .small{
+    display: block;
+   }
+   .footer_logo2{
+    display: none;
+   }
+ }
+ 
+  @media(max-width:414px){
+   .category ul li{
+      font-size: 14px;
+    }
+}
+   @media(max-width:419px){
+      .logo4{
+            display: block;
+         }
+      .logo3{
+            display: none;
+       }
+   }
+   @media(max-width:339px){
+      .logo5{
+           display: block;
+           padding-left: 3%;
+       }
+       .logo4{
+           display: none;
+       }
+   }
+   @media(max-width:294px){
+      .category ul li{
+         font-size: 13px;
+       }
+   }
+
 
 
