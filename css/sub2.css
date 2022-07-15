@@ -85,6 +85,15 @@ body{
 }
 
 
+/*top버튼*/
+.fixed_box{
+   width:40px;
+   position:fixed;
+   right:20px;
+   bottom:20px;
+   display: inline-block;
+   z-index: 999999;
+}
 
 
 
