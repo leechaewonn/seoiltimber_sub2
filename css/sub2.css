@@ -299,6 +299,41 @@ input[id="menuicon"]+label, .slidebar{
 }
 
 
+/*notice*/
+.notice{width:1100px;
+	margin:auto;
+	background:#eee;
+	margin-top:30px;
+text-align: center;}
+	
+/*제목부분*/
+.notice .title{overflow:hidden;
+	padding:10px 10px;
+}
+.notice .title_in{float:left;}
+.plus{float:right;
+	margin-right:10px;}
+.notice .text_info{padding:10px;
+	background:#f9f9f9;
+	display:none;
+   font-weight: 300;
+   padding-top: 20px;
+   text-align: center;
+}
+
+.notice .text_info p{
+  padding-bottom: 20px;
+  text-align: center;
+}
+.notice{
+   display: none;
+}
+
+/*+모양 회전관련 속성*/
+.turn{transform:rotate(45deg);}
+.plus img{transition:transform 0.5s;}
+.on1{visibility:visible;}
+
 
 /*컨텐츠*/
 #products{
@@ -491,6 +526,7 @@ input[id="menuicon"]+label, .slidebar{
        }
        .category{
          margin-bottom: 10px;
+         text-align: center;
       }
       .category ul{
          padding-top: 120px;
@@ -513,6 +549,17 @@ input[id="menuicon"]+label, .slidebar{
           
       }
     
+  }
+  @media(max-width:752px){
+   .notice{
+      display: block;
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 80px;
+   }
+   .category{
+      display: none;
+   }
   }
 
   @media(max-width:502px){
@@ -537,6 +584,15 @@ input[id="menuicon"]+label, .slidebar{
             display: none;
        }
    }
+   @media(max-width:402px){
+      .notice .text_info p{
+         font-size: 14px;
+      }
+      .notice .title_in{
+         font-size: 14px;
+      }
+   }
+  
    @media(max-width:339px){
       .logo5{
            display: block;
